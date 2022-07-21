@@ -3,7 +3,7 @@ function BMI() {
     num2 = document.getElementById("berat").value;
     konversiTinggi = num1 / 100;
     let result=num2 / (konversiTinggi * konversiTinggi)
-    document.getElementById("result").innerHTML = '<p class="mt-5"> BMI kamu </p>'+Math.round(result);
+    document.getElementById("result").innerHTML = '<span class="mt-5"> BMI kamu </span>'+Math.round(result)+'.';
     return (result)
 }
 function hasil() {
@@ -51,3 +51,14 @@ function hasil() {
 // console.log(cekBMI(50, 180))//15.4 sangat kurus
 // console.log(cekBMI(50))//Invalid input
 
+function getName() {
+    let name = ''
+    if(document.getElementById("user-name").value.length === 0){
+        name = 'Tamu'
+    } else{
+        name = document.getElementById("user-name").value;
+    }
+    
+    document.getElementById("showName").innerHTML = name;
+    return name
+}
