@@ -3,7 +3,7 @@ function BMI() {
     num2 = document.getElementById("berat").value;
     konversiTinggi = num1 / 100;
     let result=num2 / (konversiTinggi * konversiTinggi)
-    document.getElementById("result").innerHTML = result;
+    document.getElementById("result").innerHTML = '<p class="mt-5"> BMI kamu </p>'+Math.round(result);
     return (result)
 }
 function hasil() {
@@ -38,7 +38,7 @@ function hasil() {
         output = 'Invalid Input'
     }
 
-    document.getElementById("resulttest").innerHTML = output
+    document.getElementById("resulttest").innerHTML ='Kamu termasuk '+ output
     return (output)
 }
 // console.log(cekBMI(50, 110))//41.3 ob III
