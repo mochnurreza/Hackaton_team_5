@@ -51,3 +51,14 @@ function hasil() {
 // console.log(cekBMI(50, 180))//15.4 sangat kurus
 // console.log(cekBMI(50))//Invalid input
 
+function getName() {
+    let name = ''
+    if(document.getElementById("user-name").value.length === 0){
+        name = 'Tamu'
+    } else{
+        name = document.getElementById("user-name").value;
+    }
+    
+    document.getElementById("showName").innerHTML = name;
+    return name
+}
