@@ -1,39 +1,44 @@
-function cekBMI(berat,tinggi) {
-    // let berat=document.getElementById('berat').value
-    // let tinggi=document.getElementById('tinggi').value
-    let meter = tinggi / 100
-    let BMI = berat / (meter * meter)
-    // document.getElementById('bmi').innerHTML=BMI 
-    let output = ''
-
-    if (BMI >= 40) {
+function BMI() {
+    num1 = document.getElementById("tinggi").value;
+    num2 = document.getElementById("berat").value;
+    konversiTinggi = num1 / 100;
+    let result=num2 / (konversiTinggi * konversiTinggi)
+    document.getElementById("result").innerHTML = result;
+    return (result)
+}
+function hasil() {
+    let hasilBMI = BMI()
+    console.log(BMI)
+    let output=''
+    if (hasilBMI >= 40) {
         output = 'Obesitas III'
     }
-    else if (BMI >= 35 && BMI <= 39.9) {
+    else if (hasilBMI >= 35 && hasilBMI <= 39.9) {
         output = 'Obesitas II'
     }
-    else if (BMI >= 30 && BMI <= 34.9) {
+    else if (hasilBMI >= 30 && hasilBMI <= 34.9) {
         output = 'Obesitas I'
     }
-    else if (BMI >=25 && BMI <=29.9) {
+    else if (hasilBMI >= 25 && hasilBMI <= 29.9) {
         output = 'Pre-Obesitas'
     }
-    else if (BMI >=18.5 && BMI <=24.9) {
+    else if (hasilBMI >= 18.5 && hasilBMI <= 24.9) {
         output = 'Normal'
     }
-    else if (BMI >=17 && BMI <=18.4) {
+    else if (hasilBMI >= 17 && hasilBMI <= 18.4) {
         output = 'Sedikit Kurus'
     }
-    else if (BMI >=16 && BMI <=16.9) {
+    else if (hasilBMI >= 16 && hasilBMI <= 16.9) {
         output = 'Kurus'
     }
-    else if (BMI <16) {
+    else if (hasilBMI < 16) {
         output = 'Sangat Kurus'
     }
     else {
-        output = 'Invalid input'
+        output = 'Invalid Input'
     }
-   
+
+    document.getElementById("resulttest").innerHTML = output
     return (output)
 }
 // console.log(cekBMI(50, 110))//41.3 ob III
