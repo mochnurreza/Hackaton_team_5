@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD:register.html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <script src="./index.js"></script>
+=======
+<html lang="en" class="scroll-smooth">
+  <head>
+    <title>Body Mass Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+>>>>>>> 5cc8d90b0ccc42b5fdec2f9a74e1dd685d59338d:page3.html
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script>
@@ -39,28 +46,6 @@
         <a href="#" class="flex items-center my-3 mx-10">
           <img src="./asset/logo.svg" alt="logo" class="h-10 w-20 rounded-lg" />
         </a>
-        <button
-          data-collapse-toggle="navbar-multi-level"
-          type="button"
-          class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500"
-          aria-controls="navbar-multi-level"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
           <ul
             class="flex flex-col mx-10 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
@@ -80,6 +65,7 @@
     <!-- end navbar -->
 
     <!-- content -->
+<<<<<<< HEAD:register.html
   
     <div class="mt-32 text-center w-2/4 bg-white rounded-lg border m-auto dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 shadow-md">
         <h1 class="text-3xl mt-3">Ayo Daftar</h1>
@@ -107,3 +93,119 @@
     
 </body>
 </html>
+=======
+    <div class="bg-cyan-500 hover:bg-cyan-700 rounded-lg w-28 shadow-md px-4 py-2 text-white md:mt-20 md:ml-auto md:mr-44">
+      <a href="#" class="text-white text-sm ml-3">
+        Edit data
+      </a>
+    </div>
+    <div class="flex mx-auto w-3/4">
+      <div
+        class="flex items-center w-2/4 mx-5 bg-white rounded-lg border mt-10 mx-10 shadow-md md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <div
+          class="flex justify-between m-auto p-4 leading-normal h-72 "
+        >
+          <!-- <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Statistik
+          </h5> -->
+          <img src="./asset/Body Images/8.png" alt="obesitas3" class="h-60 w-28 hidden" id="result-img" />
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-24 hidden" id="invalid">Data tidak valid</h5>
+        </div>  
+    </div>
+    <div
+        class="flex items-center w-2/4 mx-5 bg-white rounded-lg border mt-10 mx-10 shadow-md md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <div
+          class="flex m-auto p-4 leading-normal h-72"
+        >
+          <!-- <h5
+            class="mb-2 text-2xl font-bold mx-20 text-gray-900 dark:text-white"
+          >
+            Output
+          </h5> -->
+          <h5 class="mb-2 text-md font-md mx-5 leading-6 text-gray-900 dark:text-white mt-14 hidden" id="quote">
+            So I started to walk into the water. I won't lie to you boys, I was terrified. But I pressed on, and as I made my way past the breakers a strange calm came over me. I don't know if it was divine intervention or the kinship of all living things but I tell you Jerry at that moment, I was a marine biologist.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- end of content -->
+
+    <!-- script -->
+    <script>
+    function displayImg() {
+      let result = hasil()
+
+      if(result === 'Obesitas III'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/8.png" alt="obesitas3" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else if(result === 'Obesitas II'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/7.png" alt="obesitas2" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else if(result === 'Obesitas I'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/6.png" alt="obesitas1" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else if(result === 'Pre-Obesitas'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/5.png" alt="preobesitas" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else if(result === 'Normal'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/4.png" alt="normal" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else if(result === 'Sedikit Kurus'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/3.png" alt="sedikitkurus" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else if(result === 'Kurus'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/2.png" alt="kurus" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else if(result === 'Sangat Kurus'){
+        document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/1.png" alt="sangatkurus" class="h-60 w-28" />'
+        document.getElementById('result-img').classList.remove('hidden')
+      } else {
+        document.getElementById('invalid').innerHTML = '<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white m-24">Data tidak valid</h5>'
+        document.getElementById('invalid').classList.remove('hidden')
+      }
+    }
+
+    function displayQuote(){
+      let result = hasil()
+
+      if(result === 'Obesitas III'){
+        document.getElementById('quote').innerHTML = 'Gendut banget banget banget!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      } else if(result === 'Obesitas II'){
+        document.getElementById('quote').innerHTML = 'Gendut banget sih!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      } else if(result === 'Obesitas I'){
+        document.getElementById('quote').innerHTML = 'Awas nanti gendut loh!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      } else if(result === 'Pre-Obesitas'){
+        document.getElementById('quote').innerHTML = 'ideal!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      } else if(result === 'Normal'){
+        document.getElementById('quote').innerHTML = 'Gendut gendutin lagi dikit aja!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      } else if(result === 'Sedikit Kurus'){
+        document.getElementById('quote').innerHTML = 'Kamu kurus!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      } else if(result === 'Kurus'){
+        document.getElementById('quote').innerHTML = 'Awas ketiup angin!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      } else if(result === 'Sangat Kurus'){
+        document.getElementById('quote').innerHTML = 'Dibere dahar naon sih maneh???'
+        document.getElementById('quote').classList.remove('hidden')
+      } else {
+        document.getElementById('quote').innerHTML = 'tidak ada quote hari ini!!!'
+        document.getElementById('quote').classList.remove('hidden')
+      }
+    }
+
+    displayImg()
+    displayQuote()
+    </script>
+    <!-- end of script -->
+  </body>
+</html>
+>>>>>>> 5cc8d90b0ccc42b5fdec2f9a74e1dd685d59338d:page3.html
