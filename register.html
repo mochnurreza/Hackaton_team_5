@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+</head>
+<body>
+    <div id="container" class="form-wrap">
+    <!-- header -->
+    <header>
+        <h1>Ayo Daftar</h1>
+        <p>Mudah, Gratis, dan kamu akan mendapatkan rekomendasi berdasarkan hasil BMI mu!</p>
+        <br><br>
+    </header>
+
+
+    <div >
+
+        <form>
+
+            <div class="form-group label">
+                <!-- input nama user -->
+                <label for="name">Nama</label>
+                <input type="text" id="user-name" name="name"><br><br>
+            </div>
+            
+            <!-- submit button -->
+            <button onclick="greeting()">submit</button>
+        </form>
+
+        <br><br>
+        <div class="footer">
+            <a class="link"  href="./cek.html"> Halo Tamu, Ayo cek BMI!</a>
+        </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <footer>
+
+    </footer>
+
+    <script>
+        function greeting(){
+            document.getElementById("userName").innerHTML = 'hello'
+        }
+    </script>
+    
+</body>
+</html>
