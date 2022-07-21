@@ -60,6 +60,13 @@ function getName() {
     }
     
     document.getElementById("showName").innerHTML = name;
+    nama = name
     return name
 }
 
+let nama = ''
+
+function callName() {
+    document.getElementById("showName").innerHTML = nama
+    console.log(nama)
+}
