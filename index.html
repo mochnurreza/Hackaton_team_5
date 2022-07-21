@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Kita</title>
+</head>
+
+<body>
+
+    <section id="logo">
+        <!--buat logo-->
+    </section>
+    <h1 align="center">Cek BMI yuk!</h1>
+    <form>
+        <table border="0" align="center">
+            <tr>
+                <td><label for="tinggi">Tinggi</label></td>
+                <td><input type="text" id="tinggi" placeholder="Masukkan tinggi dalam Cm" /></td>
+            </tr>
+            <tr>
+                <td><label for="berat">Berat</label></td>
+                <td><input type="text" id="berat" placeholder="Masukkan berat dalam Kg" /></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" onClick="BMI()" Value="Cek BMI" /></td>
+                <td><input type="button" onClick="hasil()" Value="Cek Status" /></td>
+            </tr>
+
+        </table>
+    </form>
+    <form>
+        <table border="0" align="center">
+            <tr>
+                <td><label for="BMI">BMI</label></td>
+                <td><span id="result"></span></td>
+                <td><label for="hasil">Hasil</label></td>
+                <td><span id="resulttest"></span></td>>
+            </tr>
+        </table>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
