@@ -27,7 +27,7 @@
   <body>
     <!-- navbar -->
     <nav
-      class="px-2 bg-cyan-500 h-14 border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+      class="px-2 bg-cyan-500 h-14 border-gray-200 dark:border-gray-700"
     >
       <div
         class="container flex flex-wrap justify-between items-center mx-auto"
@@ -41,7 +41,7 @@
           >
             <li>
               <a
-                href="#"
+                href="./index.html"
                 class="block py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-blue-700 md:hover:text-blue-700 md:p-0 md:text-white dark:bg-blue-600 md:dark:bg-transparent"
                 aria-current="page"
                 >Home</a
@@ -49,8 +49,8 @@
             </li>
             <li>
               <a
-                href="#"
-                class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                href="./setting.html"
+                class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 >User</a
               >
             </li>
@@ -63,7 +63,7 @@
 
     <!-- content -->
     <div class="bg-cyan-500 hover:bg-cyan-700 rounded-lg w-28 shadow-md px-4 py-2 text-white md:mt-20 md:ml-auto md:mr-44">
-      <a href="#" class="text-white text-sm ml-3 focus:ring-2">
+      <a href="./bmiUser.html" class="text-white text-sm ml-3 focus:ring-2">
         Edit data
       </a>
     </div>
@@ -105,30 +105,30 @@
     <!-- script -->
     <script>
     function displayImg() {
-      let result = hasil()
+      let result = localStorage.bmi
 
-      if(result === 'Obesitas III'){
+      if(result == 'Obesitas III'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/8.png" alt="obesitas3" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
-      } else if(result === 'Obesitas II'){
+      } else if(result == 'Obesitas II'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/7.png" alt="obesitas2" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
-      } else if(result === 'Obesitas I'){
+      } else if(result == 'Obesitas I'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/6.png" alt="obesitas1" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
-      } else if(result === 'Pre-Obesitas'){
+      } else if(result == 'Pre-Obesitas'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/5.png" alt="preobesitas" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
-      } else if(result === 'Normal'){
+      } else if(result == 'Normal'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/4.png" alt="normal" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
-      } else if(result === 'Sedikit Kurus'){
+      } else if(result == 'Sedikit Kurus'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/3.png" alt="sedikitkurus" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
-      } else if(result === 'Kurus'){
+      } else if(result == 'Kurus'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/2.png" alt="kurus" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
-      } else if(result === 'Sangat Kurus'){
+      } else if(result == 'Sangat Kurus'){
         document.getElementById('result-img').innerHTML = '<img src="./asset/Body Images/1.png" alt="sangatkurus" class="h-60 w-28" />'
         document.getElementById('result-img').classList.remove('hidden')
       } else {
@@ -138,30 +138,30 @@
     }
 
     function displayQuote(){
-      let result = hasil()
+      let result = localStorage.bmi
 
-      if(result === 'Obesitas III'){
+      if(hasilBMI >= 40){
         document.getElementById('quote').innerHTML = 'Gendut banget banget banget!!!'
         document.getElementById('quote').classList.remove('hidden')
-      } else if(result === 'Obesitas II'){
+      } else if(result == 'Obesitas II'){
         document.getElementById('quote').innerHTML = 'Gendut banget sih!!!'
         document.getElementById('quote').classList.remove('hidden')
-      } else if(result === 'Obesitas I'){
+      } else if(result == 'Obesitas I'){
         document.getElementById('quote').innerHTML = 'Awas nanti gendut loh!!!'
         document.getElementById('quote').classList.remove('hidden')
-      } else if(result === 'Pre-Obesitas'){
+      } else if(result == 'Pre-Obesitas'){
         document.getElementById('quote').innerHTML = 'ideal!!!'
         document.getElementById('quote').classList.remove('hidden')
-      } else if(result === 'Normal'){
+      } else if(result == 'Normal'){
         document.getElementById('quote').innerHTML = 'Gendut gendutin lagi dikit aja!!!'
         document.getElementById('quote').classList.remove('hidden')
-      } else if(result === 'Sedikit Kurus'){
+      } else if(result == 'Sedikit Kurus'){
         document.getElementById('quote').innerHTML = 'Kamu kurus!!!'
         document.getElementById('quote').classList.remove('hidden')
-      } else if(result === 'Kurus'){
+      } else if(result == 'Kurus'){
         document.getElementById('quote').innerHTML = 'Awas ketiup angin!!!'
         document.getElementById('quote').classList.remove('hidden')
-      } else if(result === 'Sangat Kurus'){
+      } else if(result == 'Sangat Kurus'){
         document.getElementById('quote').innerHTML = 'Dibere dahar naon sih maneh???'
         document.getElementById('quote').classList.remove('hidden')
       } else {

@@ -4,11 +4,17 @@ function BMI() {
     konversiTinggi = num1 / 100;
     let result=num2 / (konversiTinggi * konversiTinggi)
     document.getElementById("result").innerHTML = '<span class="mt-5"> BMI kamu </span>'+Math.round(result)+'.';
+
+    if (num1 && num2) {
+        localStorage.setItem("tinggi", num1)
+        localStorage.setItem("berat", num2)
+    }
+
     return (result)
 }
 function hasil() {
     let hasilBMI = BMI()
-    console.log(BMI)
+    // console.log(BMI)
     let output=''
     if (hasilBMI >= 40) {
         output = 'Obesitas III'
@@ -39,6 +45,7 @@ function hasil() {
     }
 
     document.getElementById("resulttest").innerHTML ='Kamu termasuk '+ output
+    localStorage.setItem("bmi", output)
     return (output)
 }
 // console.log(cekBMI(50, 110))//41.3 ob III
@@ -51,22 +58,70 @@ function hasil() {
 // console.log(cekBMI(50, 180))//15.4 sangat kurus
 // console.log(cekBMI(50))//Invalid input
 
-function getName() {
-    let name = ''
-    if(document.getElementById("user-name").value.length === 0){
-        name = 'Tamu'
-    } else{
-        name = document.getElementById("user-name").value;
+// function getName() {
+//     let name = ''
+//     if(document.getElementById("user-name").value.length === 0){
+//         name = 'Tamu'
+//     } else{
+//         name = document.getElementById("user-name").value;
+//     }
+    
+//     document.getElementById("showName").innerHTML = name;
+
+//     return name
+// }
+
+// user data on local storage tests
+// localStorage.setItem('name', 'asoy')
+// localStorage.removeItem('name')
+// localStorage.removeItem('userList')
+// console.log(localStorage)
+
+
+
+// user data
+const getUserName = document.getElementById("user-name")
+const getUserBtn = document.getElementById("getUserBtn")
+
+const getWeight = document.getElementById("berat").value
+const getHeight = document.getElementById("tinggi").value
+const getBmiBtn = document.getElementById("getBmiBtn").value
+
+const getUserList = document.getElementById("user-list")
+
+
+function getUser() {
+    const key = 'nama'
+    const value = getUserName.value
+
+    // console.log("key = ", key)
+    // console.log("value = ", value)
+
+    if(localStorage.nama) {
+        localStorage.nama = getUserName.value
+    } else {
+        if (value) localStorage.setItem(key, value)
     }
     
-    document.getElementById("showName").innerHTML = name;
-    nama = name
-    return name
 }
 
-let nama = ''
+function changeName() {
+    localStorage.nama = document.getElementById("change-name").value
+}
 
-function callName() {
-    document.getElementById("showName").innerHTML = nama
-    console.log(nama)
+
+// let userName = ""
+
+// if (localStorage.nama) {
+//     userName = localStorage.nama.value
+// } else {
+//     userName = "Tamu"
+// }
+
+document.getElementById("userName").innerHTML = localStorage.nama
+
+
+
+function delUser() {
+    localStorage.clear()
 }
