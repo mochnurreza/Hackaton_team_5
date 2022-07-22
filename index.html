@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="draft.css">
+  <title>BMI Kita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <nav
+      class="px-2 bg-cyan-500 h-14 border-gray-200 dark:border-gray-700"
+    >
+      <div
+        class="container flex flex-wrap justify-between items-center mx-auto"
+      >
+        <a href="./index.html" class="flex items-center my-3 mx-10">
+          <img src="./asset/logo.svg" alt="logo" class="h-10 w-20 rounded-lg" />
+        </a>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+          <ul
+            class="flex flex-col mx-10 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+          >
+            <li>
+              <a
+                href="./dashboard.html"
+                class="hidden block py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-blue-700 md:hover:text-blue-700 md:p-0 md:text-white dark:bg-blue-600 md:dark:bg-transparent"
+                aria-current="page"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="./register.html"
+                class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >User</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="flex-col container mx-auto">
+      <div>
+        <img class="w-80 mx-auto" src="./asset/bmiScale.png">
+      </div>
+      <div class="box-content h-80 w-80 border-2 rounded-md mb-10 shadow-xl m-auto p-6">
+        <p class="text-center">Body Mass Index</p>
+        <br>
+        <p class="text-justify">Body Mass Index (BMI) atau indeks Massa Tubuh (IMT) adalah salah satu cara untuk mengetahui rentang berat badan ideal Anda dan memprediksi seberapa besar risiko gangguan kesehatan Anda. Metode ini digunakan untuk menentukan berat badan yang sehat berdasarkan berat dan tinggi badan.</p>
+        <br>
+        <div class="bg-cyan-500 hover:bg-cyan-700 rounded-lg w-36 shadow-md px-4 py-2 text-white m-auto">
+          <a href="./bmiGuest.html" class="text-white text-sm ml-4" type="button">
+            Hitung BMI
+          </a>
+        </div>
+      </div>
+  </div>
+  </header>
+</body>
+</html> 
