@@ -2,15 +2,15 @@ function BMI() {
     num1 = document.getElementById("tinggi").value;
     num2 = document.getElementById("berat").value;
     konversiTinggi = num1 / 100;
-    let result=num2 / (konversiTinggi * konversiTinggi)
-    document.getElementById("result").innerHTML = '<span class="mt-5"> BMI kamu </span>'+Math.round(result)+'.';
+    let result= num2 / (konversiTinggi * konversiTinggi)
+    document.getElementById("result").innerHTML = '<span class="mt-5"> BMI kamu </span>'+result.toFixed(1)+'.';
 
     if (num1 && num2) {
         localStorage.setItem("tinggi", num1)
         localStorage.setItem("berat", num2)
     }
 
-    return (result)
+    return (result.toFixed(1))
 }
 function hasil() {
     let hasilBMI = BMI()
@@ -117,6 +117,9 @@ function changeName() {
 // } else {
 //     userName = "Tamu"
 // }
+if(!localStorage.nama){
+    localStorage.nama = 'Tamu'
+}
 
 document.getElementById("userName").innerHTML = localStorage.nama
 
